@@ -1,8 +1,11 @@
 <?php
+function conectareBD($host = 'localhost', $user = 'root', $password = '', $database = 'agenda') {
+    return mysqli_connect($host, $user, $password, $database);
+}
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+function inregistrareUtilizator($nume, $prenume, $email, $parola) {
+    $link = conectareBD();
+    $query = "INSERT INTO utilizator VALUES(null, '$nume', '$prenume','$email','$parola')";
+    return mysqli_query($link, $query);
+}
 

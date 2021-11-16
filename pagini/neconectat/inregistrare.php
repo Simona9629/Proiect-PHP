@@ -25,6 +25,20 @@
 </form>
 
 <?php
+require_once 'functii/sql_functions.php';
 
+if (isset($_POST['inregistrare'])) {
+    $nume = $_POST['nume'];
+    $prenume = $_POST['prenume'];
+    $email = $_POST['email'];
+    $parola = $_POST['pass'];
+    $rez_user = inregistrareUtilizator($nume, $prenume, $email, $parola);
+    
+    if ($rez_user) {
+        print '<p style="color: green"> Utilizator inregistrat cu succes</p>';
+    } else {
+        print '<p style="color: red"> Utilizatorul nu a fost inregistrat</p>';
+    }
+}
 
 
