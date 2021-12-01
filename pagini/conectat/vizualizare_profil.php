@@ -1,23 +1,23 @@
 <h2>Vizualizare profil</h2>
 
+<?php
+$email = $_SESSION['user'];
+$utilizator = preiaUtilizatorDupaEmail($email);
+?>
 <span class="left"><img src="imagini/no_profile.png" /></span>
 <p>
     <table style="border-spacing:0; width:50%;">
         <tr>
             <td>Nume</td>
-            <td>%nume utilizator%</td>
+            <td><?php print $utilizator['nume'];?></td>
         </tr>
         <tr>
             <td>Prenume</td>
-            <td>%prenume utilizator%</td>
+            <td><?php print $utilizator['prenume'];?></td>
         </tr>
         <tr>
             <td>E-mail</td>
-            <td>%email utilizator%</td>
-        </tr>
-        <tr>
-            <td>Parola</td>
-            <td>*******</td>
+            <td><?php print $utilizator['email'];?></td>
         </tr>
     </table>
 
@@ -36,9 +36,3 @@
         </p>
     </div>
 </form>
-
-
-<?php
-
-
-

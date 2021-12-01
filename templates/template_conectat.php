@@ -1,7 +1,12 @@
 <!--meniu cu adaugare task, lista taskuri, vizualizare profil, deconectare
 sablonare pt paginile din meniu, nu intra si deconectare aici la sablonare -->
 
-
+<?php
+if (isset($_GET['logout'])) {
+    session_destroy();
+    header('location: index.php');
+}
+?>
 <head>
   
   <meta name="description" content="website description" />
@@ -25,7 +30,7 @@ sablonare pt paginile din meniu, nu intra si deconectare aici la sablonare -->
           <li class="selected"><a href="index.php">Lista taskuri</a></li>
           <li><a href="index.php?page=1">Adaugare task</a></li>
           <li><a href="index.php?page=2">Vizualizare profil</a></li>
-          
+          <li><a href="index.php?logout">Deconectare</a></li>
         </ul>
       </div>
     </div>
@@ -100,9 +105,3 @@ sablonare pt paginile din meniu, nu intra si deconectare aici la sablonare -->
     </div>
   </div>
 </body>
-
-
-<?php
-
-
-

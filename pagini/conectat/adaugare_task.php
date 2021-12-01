@@ -28,5 +28,8 @@
     </div>
 </form>
 <?php
+require_once 'functii/sql_functions.php';
+
+
 
 

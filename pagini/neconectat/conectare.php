@@ -17,4 +17,18 @@
 </form>
 <?php
 
+if (isset($_POST['login'])) {
+    $email = $_POST['email'];
+    $parola = $_POST['pass'];
+    $rezultat = conectareUtilizator($email, $parola);
+    
+    if ($rezultat) {
+        $_SESSION['id_user'] = preiaUtilizatorDupaEmail($email)['id'];
+        $_SESSION['user'] = $email;
+        header('location: index.php');
+    } else {
+        print "<h3 style='color: red'> Eroare la conectare </h3>";
+    }
+}
+
 
