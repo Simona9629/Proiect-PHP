@@ -55,3 +55,19 @@ function conectareUtilizator($email, $parola)
     }
     return false;
 }
+
+function preiaUtilizatorDupaId($id)
+{
+    $link = conectareBD();
+    $query = "SELECT * FROM utilizator WHERE id='$id'";
+    $result = mysqli_query($link, $query);
+    $user = mysqli_fetch_array($result, MYSQLI_ASSOC);
+    return $user;
+}
+function updateUtilizatorDupaId($id, $imagine)
+{
+    $link = conectareBD();
+    $query = "UPDATE utilizator SET poza_profil = '$imagine' WHERE id = $id";
+    $rezultat = mysqli_query($link, $query);
+    return $rezultat;
+}
