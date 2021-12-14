@@ -81,7 +81,9 @@ if (count($taskuri) == 0) {
                     ?>
                 </td>
                 <td>
-                    <a href='index.php?finalizeaza=<?php print $task['id']; ?>'>Marcheaza ca finalizat</a>
+                    <?php if ($task['status'] == 0) {?>
+                        <a href='index.php?finalizeaza=<?php print $task['id']; ?>'>Marcheaza ca finalizat</a>
+                    <?php }?>
                 </td>
             </tr>
             <?php }?>
