@@ -82,3 +82,30 @@ function adaugareTask($titlu, $data, $descriere, $tip,$id_utilizator)
     $rezultat = mysqli_query($link, $query);
     return $rezultat;
 }
+
+function preluareTaskuriDupaIdUtilizator($id)
+{
+    $link = conectareBD();
+    $query = "SELECT * FROM task WHERE id_utilizator = $id";
+    $rezultat = mysqli_query($link, $query);
+    $taskuri = mysqli_fetch_all($rezultat, MYSQLI_ASSOC);
+    
+    return $taskuri;
+}
+
+function actualizareStatusDupaIdTask($id)
+{
+    $link = conectareBD();
+    $query = "UPDATE task SET status = 1 WHERE id = $id";
+    $rezultat = mysqli_query($link, $query);
+    return $rezultat;
+}
+
+function preluareTaskuriDupaKeywordIdUtilizator($keyword, $id)
+{
+    $link = conectareBD();
+    $query = "SELECT * FROM task WHERE tip = '$keyword' AND id_utilizator = $id";
+    $rezultat = mysqli_query($link, $query);
+    $taskuri = mysqli_fetch_all($rezultat, MYSQLI_ASSOC);
+    return $taskuri;
+}

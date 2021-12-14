@@ -7,13 +7,19 @@ and open the template in the editor.
 <?php
 session_start();
 require_once 'functii/sql_functions.php';
+
+if (isset($_GET['finalizeaza'])) {
+    $id = $_GET['finalizeaza'];
+    actualizareStatusDupaIdTask($id);
+
+}
 ?>
 <html>
     <head>
         <meta charset="UTF-8">
         <title></title>
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
-        <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">-->
+        
     </head>
     <body>
         <?php

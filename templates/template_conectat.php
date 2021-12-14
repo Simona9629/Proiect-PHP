@@ -43,9 +43,9 @@ if (isset($_GET['logout'])) {
           <div class="sidebar_item">
             <!-- insert your sidebar items here -->
             <h3>Latest News</h3>
-            <h4>10 sfaturi de organizare a timpului</h4>
-            <h5>06 Noiembrie 2021</h5>
-            <p>Timpul este una din cele mai prețioase resurse de care dispunem astăzi. Şi totodată una din cele mai frecvente probleme cu care ne luptăm <br /><a href="#">Read more</a></p>
+            <h4>Timpul E Valoros! 11 Sfaturi Pentru Gestionarea Eficientă A Timpului</h4>
+            <h5>30 Noiembrie 2021</h5>
+            <p>Înainte să vă povestesc ce anume m-a ajutat pe mine să îmi gestionez eficient timpul, o să mă prezint. Mă numesc Ruxandra Sava... <br /><a href="https://legalup.ro/gestionarea-eficienta-a-timpului/" target="_blank">Read more</a></p>
           </div>
           <div class="sidebar_base"></div>
         </div>
@@ -54,10 +54,9 @@ if (isset($_GET['logout'])) {
           <div class="sidebar_item">
             <h3>Useful Links</h3>
             <ul>
-              <li><a href="#">link 1</a></li>
-              <li><a href="#">link 2</a></li>
-              <li><a href="#">link 3</a></li>
-              <li><a href="#">link 4</a></li>
+              <li><a href="https://www.la-psiholog.ro/info/managementul-timpului" target="_blank">Managementul timpului</a></li>
+              <li><a href="https://www.eventim.ro/ro/" target="_blank">Evenimente</a></li>
+              <li><a href="https://www.mystage.ro/" target="_blank">mySTAGE</a></li>
             </ul>
           </div>
           <div class="sidebar_base"></div>
