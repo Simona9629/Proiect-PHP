@@ -15,6 +15,7 @@ CREATE TABLE task(
 	id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     titlu VARCHAR(100) NOT NULL,
     data DATE NOT NULL,
+    tip ENUM('task', 'eveniment', 'reminder'),
     descriere TEXT,
     status BOOLEAN,
     id_utilizator TINYINT,
@@ -22,3 +23,5 @@ CREATE TABLE task(
 );
 
 SELECT * FROM utilizator;
+SELECT * FROM task;
+-- DROP TABLE task;

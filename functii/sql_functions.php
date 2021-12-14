@@ -71,3 +71,14 @@ function updateUtilizatorDupaId($id, $imagine)
     $rezultat = mysqli_query($link, $query);
     return $rezultat;
 }
+
+function adaugareTask($titlu, $data, $descriere, $tip,$id_utilizator)
+{
+    $link = conectareBD();
+    $titlu = clearData($titlu, $link);
+    $descriere = clearData($descriere, $link);
+    $query = "INSERT INTO task VALUES(NULL, '$titlu', '$data', '$tip', '$descriere', 0, $id_utilizator )";
+    
+    $rezultat = mysqli_query($link, $query);
+    return $rezultat;
+}
