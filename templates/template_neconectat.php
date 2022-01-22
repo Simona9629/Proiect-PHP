@@ -1,6 +1,3 @@
-<!--meniu cu adaugare task, lista taskuri, vizualizare profil, deconectare
-sablonare pt paginile din meniu, nu intra si deconectare aici la sablonare -->
-
 
 <head>
   
@@ -25,7 +22,7 @@ sablonare pt paginile din meniu, nu intra si deconectare aici la sablonare -->
           <li class="selected"><a href="index.php">Home</a></li>
           <li><a href="index.php?page=1">Conectare</a></li>
           <li><a href="index.php?page=2">Inregistrare</a></li>
-          
+          <li><a href="index.php?page=3">Propune un citat</a></li>
         </ul>
       </div>
     </div>
@@ -82,6 +79,9 @@ sablonare pt paginile din meniu, nu intra si deconectare aici la sablonare -->
                       break;
                   case 2:
                       require_once 'pagini/neconectat/inregistrare.php';
+                      break;
+                  case 3:
+                      require_once 'pagini/neconectat/propunere_citat.php';
                       break;
                   default:
                       require_once 'pagini/eroare.php';
