@@ -1,4 +1,4 @@
-### Aplicatie web de tip Agenda/calendar (Organizer). 
+### Aplicatie web de tip Agenda/calendar (Task_Organizer). 
 
 Pagini:  
 Conectare 
